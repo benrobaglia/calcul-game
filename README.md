@@ -1,4 +1,4 @@
-Quick app I built to practice mental math
+Quick app I built to practice mental math. Play here: https://benrobaglia.github.io/calcul-game/
 
 
 ## Prerequisites

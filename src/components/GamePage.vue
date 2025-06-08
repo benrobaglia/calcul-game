@@ -108,6 +108,11 @@ const endGame = () => {
     }
   })
 }
+
+const resetGame = () => {
+  clearInterval(timer)
+  router.push('/')
+}
 </script>
 
 <template>
@@ -115,6 +120,7 @@ const endGame = () => {
     <div class="game-header">
       <div>Question {{ currentQuestion }} of {{ totalQuestions }}</div>
       <div>Time: {{ timeElapsed }} seconds</div>
+      <button class="reset-button" @click="resetGame">Reset</button>
     </div>
 
     <div class="question-container">
@@ -159,5 +165,25 @@ input {
   padding: 10px;
   width: 100%;
   text-align: center;
+}
+
+.reset-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
+}
+
+.reset-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.3);
 }
 </style>
