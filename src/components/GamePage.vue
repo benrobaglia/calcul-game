@@ -67,7 +67,7 @@ const generateProblem = () => {
 }
 
 // Timer
-let timer: number
+let timer: ReturnType<typeof setInterval>
 onMounted(() => {
   generateProblem()
   timer = setInterval(() => {
